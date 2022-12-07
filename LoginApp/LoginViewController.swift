@@ -20,15 +20,25 @@ class LoginViewController: UIViewController {
     }
 
     // MARK: - IB Actions
-    @IBAction func logInButtonPushed() {
+    @IBAction func logInButtonPressed() {
     }
     
-    @IBAction func forgotUserNameButtonPushed() {
-        
+    @IBAction func forgotUserNameButtonPressed() {
+        showAlert(with: "Oops!", and: "Your name is Alex 😉")
     }
     
-    @IBAction func forgotPasswordButtonPushed() {
-        
+    @IBAction func forgotPasswordButtonPressed() {
+        showAlert(with: "Oops!", and: "Your password is Password 😉")
     }
     
+}
+
+// MARK: - UIAlertController
+extension LoginViewController {
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
