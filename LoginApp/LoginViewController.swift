@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
         
-    // MARK: View cycle
+    // MARK: - View cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
             print("OK")
         } else {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
+            passwordTF.text = ""
         }
     }
     
