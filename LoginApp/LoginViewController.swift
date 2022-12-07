@@ -21,6 +21,11 @@ class LoginViewController: UIViewController {
 
     // MARK: - IB Actions
     @IBAction func logInButtonPressed() {
+        if userNameTF.text == "Alex" && passwordTF.text == "Password" {
+            print("OK")
+        } else {
+            showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
+        }
     }
     
     @IBAction func forgotUserNameButtonPressed() {
