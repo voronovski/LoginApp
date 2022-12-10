@@ -27,7 +27,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-ki-FPb">
                                         <rect key="frame" x="0.0" y="49" width="313" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnH-sk-g9T">
                                         <rect key="frame" x="0.0" y="98" width="313" height="34.333333333333343"/>
@@ -119,7 +119,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pIP-4s-Lo6"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pIP-4s-Lo6" firstAttribute="bottom" secondItem="LXb-XQ-Fqf" secondAttribute="bottom" constant="140" id="QY7-G3-22J"/>
                             <constraint firstItem="LXb-XQ-Fqf" firstAttribute="centerX" secondItem="MBc-BM-B6F" secondAttribute="centerX" id="bBl-Jy-bj0"/>
@@ -141,9 +141,6 @@
     <resources>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
