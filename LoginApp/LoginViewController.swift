@@ -18,6 +18,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.welcome = userNameTF.text ?? ""
+    }
 
     // MARK: - IB Actions
     @IBAction func logInButtonPressed() {
