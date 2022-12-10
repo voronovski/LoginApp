@@ -27,6 +27,7 @@ class WelcomeViewController: UIViewController {
             UIColor.systemPink.cgColor,
             UIColor.systemBlue.cgColor
         ]
+        gradientLayer.opacity = 0.6
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
