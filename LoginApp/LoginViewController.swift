@@ -40,6 +40,12 @@ class LoginViewController: UIViewController {
         showAlert(with: "Oops!", and: "Your password is Password 😉")
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let welcomeVC = segue.source as? WelcomeViewController else { return }
+        userNameTF.text = welcomeVC.userName
+        passwordTF.text = welcomeVC.password
+    }
+    
 }
 
 // MARK: - UIAlertController
