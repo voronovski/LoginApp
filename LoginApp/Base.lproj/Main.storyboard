@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="R5C-bu-68Z">
-                                <rect key="frame" x="40" y="338.33333333333331" width="313" height="175.33333333333331"/>
+                                <rect key="frame" x="40" y="303.33333333333331" width="313" height="175.33333333333331"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51b-AP-kjI">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="34"/>
@@ -69,7 +69,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R5C-bu-68Z" secondAttribute="trailing" constant="40" id="8tL-ae-5h7"/>
                             <constraint firstItem="R5C-bu-68Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="QwB-nk-9Z3"/>
-                            <constraint firstItem="R5C-bu-68Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lJF-L4-4Bj"/>
+                            <constraint firstItem="R5C-bu-68Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-35" id="lJF-L4-4Bj"/>
                         </constraints>
                     </view>
                     <connections>
