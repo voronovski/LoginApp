@@ -12,6 +12,9 @@ class LoginViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
+    
+    private let user = "Alex"
+    private let password = "Password"
         
     // MARK: - View cycle
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -28,18 +31,16 @@ class LoginViewController: UIViewController {
 
     // MARK: - IB Actions
     @IBAction func logInButtonPressed() {
-        if userNameTF.text != "Alex" || passwordTF.text != "Password" {
+        if userNameTF.text != user || passwordTF.text != password {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
             passwordTF.text = ""
         }
     }
     
-    @IBAction func forgotUserNameButtonPressed() {
-        showAlert(with: "Oops!", and: "Your name is Alex 😉")
-    }
-    
-    @IBAction func forgotPasswordButtonPressed() {
-        showAlert(with: "Oops!", and: "Your password is Password 😉")
+    @IBAction func forgotUserOrPasswordPressed(_ sender: UIButton) {
+        sender.tag == 0
+            ? showAlert(with: "Oops!", and: "Your name is Alex 😉")
+            : showAlert(with: "Oops!", and: "Your password is Password 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
