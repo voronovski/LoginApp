@@ -14,9 +14,11 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
         
     // MARK: - View cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        userNameTF.resignFirstResponder()
+        passwordTF.resignFirstResponder()
         
+        super .touchesBegan(touches, with: event)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,7 +47,6 @@ class LoginViewController: UIViewController {
         userNameTF.text = welcomeVC.userName
         passwordTF.text = welcomeVC.password
     }
-    
 }
 
 // MARK: - UIAlertController
