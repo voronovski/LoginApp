@@ -22,7 +22,7 @@ final class WelcomeViewController: UIViewController {
         gradientLayer()
     }
     
-    // MARK: - Private methods
+    // MARK: - Gradient layer
     private func gradientLayer() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
