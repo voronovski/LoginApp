@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var userNameTF: UITextField!
@@ -16,29 +16,30 @@ class LoginViewController: UIViewController {
     private let user = "Alex"
     private let password = "Password"
         
-    // MARK: - View cycle
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
+    // MARK: - View cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.welcome = userNameTF.text ?? ""
+        welcomeVC.user = userNameTF.text ?? ""
     }
 
     // MARK: - IB Actions
     @IBAction func logInButtonPressed() {
-        if userNameTF.text != user || passwordTF.text != password {
+        guard userNameTF.text == user, passwordTF.text == password else {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
             passwordTF.text = ""
+            return
         }
     }
     
     @IBAction func forgotUserOrPasswordPressed(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(with: "Oops!", and: "Your name is Alex 😉")
-            : showAlert(with: "Oops!", and: "Your password is Password 😉")
+            ? showAlert(with: "Oops!", and: "Your name is \(user) 😉")
+            : showAlert(with: "Oops!", and: "Your password is \(password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
