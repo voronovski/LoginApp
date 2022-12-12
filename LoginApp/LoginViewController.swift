@@ -18,10 +18,8 @@ class LoginViewController: UIViewController {
         
     // MARK: - View cycle
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        userNameTF.resignFirstResponder()
-        passwordTF.resignFirstResponder()
-        
         super .touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,9 +42,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard let welcomeVC = segue.source as? WelcomeViewController else { return }
-        userNameTF.text = welcomeVC.userName
-        passwordTF.text = welcomeVC.password
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
