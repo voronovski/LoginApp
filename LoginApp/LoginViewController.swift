@@ -24,7 +24,7 @@ final class LoginViewController: UIViewController {
     // MARK: - View cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = userNameTF.text ?? ""
+        welcomeVC.userName = userNameTF.text ?? ""
     }
 
     // MARK: - IB Actions

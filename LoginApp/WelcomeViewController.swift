@@ -12,13 +12,13 @@ final class WelcomeViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var welcomeLabel: UILabel!
     
-    var user: String!
+    var userName: String!
     
     // MARK: - View cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.text = "Welcome, " + user + "!"
+        welcomeLabel.text = "Welcome, " + userName + "!"
         gradientLayer()
     }
     
