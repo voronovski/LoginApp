@@ -13,14 +13,16 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     
     var welcome: String!
-    let userName = ""
-    let password = ""
     
     // MARK: - View cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, " + welcome + "!"
         
+        welcomeLabel.text = "Welcome, " + welcome + "!"
+        gradientLayer()
+    }
+    
+    private func gradientLayer() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [
