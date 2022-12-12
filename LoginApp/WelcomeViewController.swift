@@ -12,16 +12,17 @@ class WelcomeViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var welcomeLabel: UILabel!
     
-    var welcome: String!
+    var user: String!
     
     // MARK: - View cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeLabel.text = "Welcome, " + welcome + "!"
+        welcomeLabel.text = "Welcome, " + user + "!"
         gradientLayer()
     }
     
+    // MARK: - Private methods
     private func gradientLayer() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
