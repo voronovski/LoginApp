@@ -14,7 +14,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     private let user = "Alex"
-    private let password = "Password"
+    private let password = "p"
         
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -23,7 +23,9 @@ final class LoginViewController: UIViewController {
     
     // MARK: - View cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        guard let welcomeVC = viewControllers.first as? WelcomeViewController else { return }
         welcomeVC.userName = userNameTF.text ?? ""
     }
 
