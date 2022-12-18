@@ -15,6 +15,8 @@
 		FA6D8644294053CA00AEFEF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6D8642294053CA00AEFEF0 /* LaunchScreen.storyboard */; };
 		FA6D864E2940607200AEFEF0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D864D2940607200AEFEF0 /* WelcomeViewController.swift */; };
 		FA92DB6C294D64770004837D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB6B294D64770004837D /* Users.swift */; };
+		FA92DB6E294EED4C0004837D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB6D294EED4C0004837D /* UserViewController.swift */; };
+		FA92DB70294EEF0B0004837D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB6F294EEF0B0004837D /* NavigationController.swift */; };
 		FAED364B29499CF7005AB938 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED364A29499CF7005AB938 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		FA6D8645294053CA00AEFEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6D864D2940607200AEFEF0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FA92DB6B294D64770004837D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		FA92DB6D294EED4C0004837D /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		FA92DB6F294EEF0B0004837D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		FAED364A29499CF7005AB938 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,8 @@
 				FA6D8639294053C900AEFEF0 /* SceneDelegate.swift */,
 				FA6D863B294053C900AEFEF0 /* LoginViewController.swift */,
 				FA6D864D2940607200AEFEF0 /* WelcomeViewController.swift */,
+				FA92DB6D294EED4C0004837D /* UserViewController.swift */,
+				FA92DB6F294EEF0B0004837D /* NavigationController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -179,11 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA92DB6E294EED4C0004837D /* UserViewController.swift in Sources */,
 				FA6D863C294053C900AEFEF0 /* LoginViewController.swift in Sources */,
 				FA6D864E2940607200AEFEF0 /* WelcomeViewController.swift in Sources */,
 				FA6D8638294053C900AEFEF0 /* AppDelegate.swift in Sources */,
 				FA92DB6C294D64770004837D /* Users.swift in Sources */,
 				FAED364B29499CF7005AB938 /* User.swift in Sources */,
+				FA92DB70294EEF0B0004837D /* NavigationController.swift in Sources */,
 				FA6D863A294053C900AEFEF0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

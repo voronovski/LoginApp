@@ -29,8 +29,7 @@ final class LoginViewController: UIViewController {
         guard let welcomeVC = viewControllers.first as? WelcomeViewController else { return }
         
         guard let foundUser = findUser(with: userID) else { return }
-        welcomeVC.userFirstName = foundUser.firstName
-        welcomeVC.userLastName = foundUser.lastName
+        welcomeVC.user = foundUser
     }
 
     // MARK: - IB Actions
