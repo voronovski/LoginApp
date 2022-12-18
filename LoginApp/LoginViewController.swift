@@ -27,7 +27,10 @@ final class LoginViewController: UIViewController {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
         guard let welcomeVC = viewControllers.first as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text ?? ""
+        
+        guard let foundUser = findUser(with: userID) else { return }
+        welcomeVC.userFirstName = foundUser.firstName
+        welcomeVC.userLastName = foundUser.lastName
     }
 
     // MARK: - IB Actions
@@ -36,10 +39,9 @@ final class LoginViewController: UIViewController {
         password = passwordTF.text ?? ""
         credentials = (userID: userID, password: password)
         
-        if !users.contains(where: {$0 == credentials}) {
+        guard !listOfCredentials.contains(where: {$0 == credentials}) else { return }
             showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
             passwordTF.text = ""
-        } else { return }
     }
     
     @IBAction func forgotUserOrPasswordPressed(_ sender: UIButton) {
@@ -61,5 +63,9 @@ extension LoginViewController {
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func findUser(with userID: String) -> User? {
+        return users.first(where: { $0.userID == userID })
     }
 }
