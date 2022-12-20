@@ -7,23 +7,20 @@
 
 import UIKit
 
-class PhotosViewController: UIViewController {
+final class PhotosViewController: UIViewController {
 
+    @IBOutlet var photoOneImageView: UIImageView!
+    @IBOutlet var photoTwoImageView: UIImageView!
+    @IBOutlet var photoThreeImageView: UIImageView!
+    
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        photoOneImageView.image = UIImage(named: user.photos[0])
+        photoTwoImageView.image = UIImage(named: user.photos[1])
+        photoThreeImageView.image = UIImage(named: user.photos[2])
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
