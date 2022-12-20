@@ -1,5 +1,5 @@
 //
-//  Users.swift
+//  users.swift
 //  LoginApp
 //
 //  Created by Aleksei Voronovskii on 12/16/22.
@@ -12,7 +12,7 @@ let alex = User(userID: "Alex", password: "alexpass", photo: "alex",
 
 let julia = User(userID: "Julia", password: "juliapass", photo: "julia.jpg",
                  firstName: "Julia", lastName: "Voron",
-                 age: 35, city: "Moscow",
+                 age: 35, city: "Seattle",
                  bio: "Hairstylist with more than 15 years of experience.\n\nHairstylist with more than 15 years of experience. Hairstylist with more than 15 years of experience. Hairstylist with more than 15 years of experience. Hairstylist with more than 15 years of experience. Hairstylist with more than 15 years of experience.", photos: ["julia1", "julia2", "julia3"])
 
 let tim = User(userID: "Tim", password: "timpass", photo: "tim.jpeg",
