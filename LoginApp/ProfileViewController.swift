@@ -1,5 +1,5 @@
 //
-//  UserViewController.swift
+//  ProfileViewController.swift
 //  LoginApp
 //
 //  Created by Aleksei Voronovskii on 12/17/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var userFirstName: UILabel!
@@ -18,10 +18,9 @@ class UserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-    
-    @IBAction func viewGalleryButtonPressed() {
+//        title = "\(user.userID)"
+//        print(user!)
+//        userFirstName.text = user.firstName
     }
     
 }

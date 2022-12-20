@@ -11,6 +11,15 @@ class NavigationController: UINavigationController {
 
     var user: User!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(user!)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let profileVC = segue.destination as? ProfileViewController else { return }
+        profileVC.user = user
+        print(profileVC.user!)
+    }
     
 }

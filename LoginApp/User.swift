@@ -16,6 +16,7 @@ struct User {
     let city: String
     let region: Region
     let bio: String
+    let photos: [String]
 }
 
 enum Sex {

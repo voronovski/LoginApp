@@ -22,13 +22,6 @@ final class WelcomeViewController: UIViewController {
         gradientLayer()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationController = segue.destination as? UINavigationController else { return }
-        let viewControllers = navigationController.viewControllers
-        guard let navigationVC = viewControllers.first as? NavigationController else { return }
-        navigationVC.user = user
-    }
-    
     // MARK: - Gradient layer
     private func gradientLayer() {
         let gradientLayer = CAGradientLayer()

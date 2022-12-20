@@ -15,7 +15,6 @@ final class LoginViewController: UIViewController {
     
     private var userID = ""
     private var password = ""
-    private var credentials = (userID: "", password: "")
         
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -24,21 +23,25 @@ final class LoginViewController: UIViewController {
     
     // MARK: - View cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let foundUser = findUser(with: userID) else { return }
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
-        guard let welcomeVC = viewControllers.first as? WelcomeViewController else { return }
         
-        guard let foundUser = findUser(with: userID) else { return }
-        welcomeVC.user = foundUser
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = foundUser
+            } else if let navigationVC = viewController as? NavigationController {
+                navigationVC.user = foundUser
+            }
+        }
     }
 
     // MARK: - IB Actions
     @IBAction func logInButtonPressed() {
         userID = userNameTF.text ?? ""
         password = passwordTF.text ?? ""
-        credentials = (userID: userID, password: password)
-        
-        guard !listOfCredentials.contains(where: {$0 == credentials}) else { return }
+        guard let foundUser = findUser(with: userID) else { return }
+        guard passwordTF.text != foundUser.password else { return }
             showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
             passwordTF.text = ""
     }

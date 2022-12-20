@@ -138,16 +138,16 @@
             </objects>
             <point key="canvasLocation" x="839" y="765"/>
         </scene>
-        <!--User-->
+        <!--Profile-->
         <scene sceneID="Ixo-iw-EjW">
             <objects>
-                <viewController id="oRN-zm-AYP" customClass="UserViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oRN-zm-AYP" customClass="ProfileViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wMS-Jb-7Pa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="KhR-hv-YIx">
-                                <rect key="frame" x="32" y="262.33333333333326" width="329" height="327.66666666666674"/>
+                                <rect key="frame" x="32" y="298.33333333333331" width="329" height="255.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tHe-4c-TVN">
                                         <rect key="frame" x="114.66666666666666" y="0.0" width="100" height="158"/>
@@ -186,19 +186,11 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ry-rW-k79">
-                                        <rect key="frame" x="144" y="235" width="41.333333333333343" height="20.333333333333343"/>
+                                        <rect key="frame" x="144" y="235.00000000000006" width="41.333333333333343" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xv-H2-5B3">
-                                        <rect key="frame" x="105.33333333333334" y="293.33333333333331" width="118.33333333333334" height="34.333333333333314"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="View Gallery"/>
-                                        <connections>
-                                            <action selector="viewGalleryButtonPressed:" destination="oRN-zm-AYP" eventType="touchUpInside" id="Lrh-sD-tZd"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -209,7 +201,13 @@
                             <constraint firstItem="KhR-hv-YIx" firstAttribute="centerX" secondItem="wMS-Jb-7Pa" secondAttribute="centerX" id="v6E-iT-lfl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="User" id="Nni-B0-OiA"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Nni-B0-OiA">
+                        <barButtonItem key="rightBarButtonItem" title="Photos" style="done" id="Y7B-mP-5ih">
+                            <connections>
+                                <segue destination="ieX-Pm-2TL" kind="show" id="rYS-rZ-YdT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="userBio" destination="1ry-rW-k79" id="y0H-Bz-yu1"/>
                         <outlet property="userFirstName" destination="W4w-Ik-caY" id="5iE-eS-g14"/>
@@ -240,11 +238,11 @@
             </objects>
             <point key="canvasLocation" x="839" y="4"/>
         </scene>
-        <!--User-->
+        <!--Profile-->
         <scene sceneID="Xq5-Mc-nVr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G3V-0F-0Ev" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="H58-lW-XEa"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G3V-0F-0Ev" customClass="NavigationController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="H58-lW-XEa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rDI-sJ-lZt">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -258,6 +256,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MuW-tn-Jok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1623.6641221374045" y="764.78873239436621"/>
+        </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="65P-YB-QIy">
+            <objects>
+                <viewController id="ieX-Pm-2TL" customClass="PhotosViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ioQ-Ze-AAe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d4g-HA-CD7">
+                                <rect key="frame" x="76" y="167" width="240" height="512"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4a-Hs-InH">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ep2-Wi-goq">
+                                        <rect key="frame" x="0.0" y="128" width="240" height="128"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-GO-NqX">
+                                        <rect key="frame" x="0.0" y="256" width="240" height="128"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N5d-i0-QK8">
+                                        <rect key="frame" x="0.0" y="384" width="240" height="128"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YXe-p8-4zp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nqe-ep-JJF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tbw-AI-eST" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3048" y="765"/>
         </scene>
     </scenes>
     <resources>
