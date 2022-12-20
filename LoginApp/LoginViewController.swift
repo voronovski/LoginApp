@@ -15,6 +15,7 @@ final class LoginViewController: UIViewController {
     
     private var userID = ""
     private var password = ""
+    private var user: User!
         
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -30,8 +31,9 @@ final class LoginViewController: UIViewController {
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = foundUser
-            } else if let navigationVC = viewController as? NavigationController {
-                navigationVC.user = foundUser
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let profileVC = navigationVC.topViewController as? ProfileViewController else { return }
+                profileVC.user = foundUser
             }
         }
     }
@@ -40,10 +42,11 @@ final class LoginViewController: UIViewController {
     @IBAction func logInButtonPressed() {
         userID = userNameTF.text ?? ""
         password = passwordTF.text ?? ""
-        guard let foundUser = findUser(with: userID) else { return }
-        guard passwordTF.text != foundUser.password else { return }
+        guard let foundUser = findUser(with: userID), passwordTF.text == foundUser.password else {
             showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
             passwordTF.text = ""
+            return
+        }
     }
     
     @IBAction func forgotUserOrPasswordPressed(_ sender: UIButton) {

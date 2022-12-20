@@ -11,23 +11,8 @@ struct User {
     let photo: String
     let firstName: String
     let lastName: String
-    let sex: Sex
     let age: Int
     let city: String
-    let region: Region
     let bio: String
     let photos: [String]
-}
-
-enum Sex {
-    case man
-    case woman
-    case other
-}
-
-enum Region: Character {
-    case Russia = "🇷🇺"
-    case Europe = "🇪🇺"
-    case Asia = "🇮🇳"
-    case USA = "🇺🇸"
 }
