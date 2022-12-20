@@ -18,6 +18,7 @@
 		FA92DB6E294EED4C0004837D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB6D294EED4C0004837D /* ProfileViewController.swift */; };
 		FA92DB70294EEF0B0004837D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB6F294EEF0B0004837D /* NavigationController.swift */; };
 		FA92DB72294FDD7F0004837D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB71294FDD7F0004837D /* PhotosViewController.swift */; };
+		FA92DB7429517CE20004837D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB7329517CE20004837D /* TabBarController.swift */; };
 		FAED364B29499CF7005AB938 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED364A29499CF7005AB938 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		FA92DB6D294EED4C0004837D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FA92DB6F294EEF0B0004837D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		FA92DB71294FDD7F0004837D /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		FA92DB7329517CE20004837D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FAED364A29499CF7005AB938 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 		FAED364729499C6F005AB938 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA92DB7329517CE20004837D /* TabBarController.swift */,
 				FA6D8637294053C900AEFEF0 /* AppDelegate.swift */,
 				FA6D8639294053C900AEFEF0 /* SceneDelegate.swift */,
 				FA6D863B294053C900AEFEF0 /* LoginViewController.swift */,
@@ -196,6 +199,7 @@
 				FA92DB6C294D64770004837D /* Users.swift in Sources */,
 				FAED364B29499CF7005AB938 /* User.swift in Sources */,
 				FA92DB70294EEF0B0004837D /* NavigationController.swift in Sources */,
+				FA92DB7429517CE20004837D /* TabBarController.swift in Sources */,
 				FA6D863A294053C900AEFEF0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
