@@ -14,7 +14,6 @@
 		FA6D8641294053CA00AEFEF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6D8640294053CA00AEFEF0 /* Assets.xcassets */; };
 		FA6D8644294053CA00AEFEF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6D8642294053CA00AEFEF0 /* LaunchScreen.storyboard */; };
 		FA6D864E2940607200AEFEF0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D864D2940607200AEFEF0 /* WelcomeViewController.swift */; };
-		FA92DB6C294D64770004837D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB6B294D64770004837D /* Users.swift */; };
 		FA92DB6E294EED4C0004837D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB6D294EED4C0004837D /* ProfileViewController.swift */; };
 		FA92DB72294FDD7F0004837D /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB71294FDD7F0004837D /* PhotosViewController.swift */; };
 		FA92DB7429517CE20004837D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA92DB7329517CE20004837D /* TabBarController.swift */; };
@@ -31,7 +30,6 @@
 		FA6D8643294053CA00AEFEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA6D8645294053CA00AEFEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6D864D2940607200AEFEF0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		FA92DB6B294D64770004837D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		FA92DB6D294EED4C0004837D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FA92DB71294FDD7F0004837D /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		FA92DB7329517CE20004837D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -49,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA27B9272952C5F90018B6E9 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				FA6D8637294053C900AEFEF0 /* AppDelegate.swift */,
+				FA6D8639294053C900AEFEF0 /* SceneDelegate.swift */,
+			);
+			name = Supports;
+			sourceTree = "<group>";
+		};
 		FA6D862B294053C900AEFEF0 = {
 			isa = PBXGroup;
 			children = (
@@ -68,9 +75,9 @@
 		FA6D8636294053C900AEFEF0 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA92DB6A294D64640004837D /* Data */,
 				FAED364929499CDC005AB938 /* Models */,
 				FAED364729499C6F005AB938 /* ViewControllers */,
+				FA27B9272952C5F90018B6E9 /* Supports */,
 				FAED364829499C87005AB938 /* Storyboards */,
 				FA6D8640294053CA00AEFEF0 /* Assets.xcassets */,
 				FA6D8645294053CA00AEFEF0 /* Info.plist */,
@@ -78,20 +85,10 @@
 			path = LoginApp;
 			sourceTree = "<group>";
 		};
-		FA92DB6A294D64640004837D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				FA92DB6B294D64770004837D /* Users.swift */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
 		FAED364729499C6F005AB938 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				FA92DB7329517CE20004837D /* TabBarController.swift */,
-				FA6D8637294053C900AEFEF0 /* AppDelegate.swift */,
-				FA6D8639294053C900AEFEF0 /* SceneDelegate.swift */,
 				FA6D863B294053C900AEFEF0 /* LoginViewController.swift */,
 				FA6D864D2940607200AEFEF0 /* WelcomeViewController.swift */,
 				FA92DB6D294EED4C0004837D /* ProfileViewController.swift */,
@@ -193,7 +190,6 @@
 				FA6D863C294053C900AEFEF0 /* LoginViewController.swift in Sources */,
 				FA6D864E2940607200AEFEF0 /* WelcomeViewController.swift in Sources */,
 				FA6D8638294053C900AEFEF0 /* AppDelegate.swift in Sources */,
-				FA92DB6C294D64770004837D /* Users.swift in Sources */,
 				FAED364B29499CF7005AB938 /* User.swift in Sources */,
 				FA92DB7429517CE20004837D /* TabBarController.swift in Sources */,
 				FA6D863A294053C900AEFEF0 /* SceneDelegate.swift in Sources */,
@@ -343,6 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67668SBPLN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoginApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Login;
@@ -374,6 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67668SBPLN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoginApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Login;

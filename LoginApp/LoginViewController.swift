@@ -15,7 +15,7 @@ final class LoginViewController: UIViewController {
     
     private var userID = ""
     private var password = ""
-    private var user: User!
+    private let users = User.getUsers()
         
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -51,8 +51,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotUserOrPasswordPressed(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(alex.userID) or \(julia.userID) or \(tim.userID) 😉")
-            : showAlert(title: "Oops!", message: "Your password is \(alex.password) or \(julia.password) or \(tim.password) 😉")
+        ? showAlert(title: "Oops!", message: "Your name is \(users[0].userID) or \(users[1].userID) or \(users[2].userID) 😉")
+            : showAlert(title: "Oops!", message: "Your password is \(users[0].password) or \(users[1].password) or \(users[2].password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
