@@ -26,7 +26,7 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         userPhoto.image = UIImage(named: user.photo)
-        title = "\(user.userID)"
+        title = user.userID
         userFirstName.text = user.firstName
         userLastName.text = user.lastName
         userAge.text = "age: " + String(user.age)
