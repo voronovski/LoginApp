@@ -9,7 +9,11 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
 
-    @IBOutlet var userPhoto: UIImageView!
+    @IBOutlet var userPhoto: UIImageView! {
+        didSet {
+            userPhoto.layer.cornerRadius = userPhoto.frame.height / 2
+        }
+    }
     @IBOutlet var userFirstName: UILabel!
     @IBOutlet var userLastName: UILabel!
     @IBOutlet var userAge: UILabel!
@@ -21,7 +25,6 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userPhoto.layer.cornerRadius = 50
         userPhoto.image = UIImage(named: user.photo)
         title = "\(user.userID)"
         userFirstName.text = user.firstName
